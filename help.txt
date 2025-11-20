@@ -1,0 +1,53 @@
+No se si agregar un git ignore con esto
+# --- SISTEMA OPERATIVO ---
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- EDITORES (No suban sus configs personales) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- LENGUAJES Y COMPILACIÓN ---
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+.venv
+
+# C/C++ (Importante: A veces querrás subir el binario del reto para Pwn/Rev,
+# pero NO los archivos objeto intermedios)
+*.o
+*.obj
+# Ojo: Si el reto es de Reverse, tal vez QUIERAS subir el .exe o .elf final.
+# Si quieres ignorar todo compilado por defecto y forzar la subida de los retos usa:
+# *.exe
+# *.elf
+# !/Pwn/**/*.elf  <-- Ejemplo para permitir binarios solo en carpetas Pwn
+
+# Java
+*.class
+*.log
+
+# Node/Web
+node_modules/
+npm-debug.log
+
+# --- CTF ESPECÍFICO ---
+# Flags falsas de prueba vs Flags reales
+# A veces es mejor no subir la flag real si el repo es público antes del evento.
+# flag.txt
+
+# --- DOCKER ---
+# Archivos de entorno con secretos
+.env
+.env.local
