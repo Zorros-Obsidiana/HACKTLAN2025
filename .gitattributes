@@ -1,0 +1,43 @@
+# Por defecto, deja que git decida, pero normaliza a LF en el repo
+* text=auto
+
+# --- REGLAS CRÍTICAS PARA DOCKER Y SCRIPTS ---
+# Estos archivos DEBEN tener saltos de línea LF (Unix), incluso si se editan en Windows
+*.sh text eol=lf
+*.bash text eol=lf
+Dockerfile text eol=lf
+docker-compose.yml text eol=lf
+Makefile text eol=lf
+
+# Archivos de Windows batch
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# --- LENGUAJES COMUNES EN CTF ---
+*.c text
+*.cpp text
+*.h text
+*.py text
+*.js text
+*.go text
+*.php text
+
+# --- BINARIOS (Nunca tocar los saltos de línea) ---
+# Esencial para retos de Forensics, Reverse Engineering y Pwn
+*.exe binary
+*.dll binary
+*.so binary
+*.o binary
+*.pyc binary
+*.out binary
+*.bin binary
+*.elf binary
+*.jpg binary
+*.png binary
+*.gif binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.pcap binary
+*.pcapng binary
